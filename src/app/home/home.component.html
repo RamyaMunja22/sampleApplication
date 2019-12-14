@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="left-column">
+      <div class="middle-left-img-text"><mdb-icon fas icon="home"></mdb-icon> &nbsp;Home </div>
+      <div class="middle-left-img-title" *ngFor = "let menuItem of menuItems" (click) = "goTo(menuItem.path)"><mdb-icon fas icon="{{menuItem.icon}}"></mdb-icon> &nbsp;{{menuItem.name}} </div>
+  </div>
+  <div class="right-column">
+    <router-outlet></router-outlet>         
+  </div>
+</div>
